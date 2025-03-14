@@ -24,7 +24,7 @@ function Vender() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      await axios.post("http://localhost:3000/api/addNewVender", venderForm);
+      await axios.post("https://sms-backend-wfdy.onrender.com/api/addNewVender", venderForm);
       setVenderDashboard(false);
       SetVenderForm({ name: "", mobile: "" });
       // alert("Vender Added Successfully...!");
@@ -39,7 +39,7 @@ function Vender() {
   //get
   const fetchVender = async () => {
     try {
-      const res = await axios.get("http://localhost:3000/api/addNewVender");
+      const res = await axios.get("https://sms-backend-wfdy.onrender.com/api/addNewVender");
       console.log(res.data.message.length)
       console.log(res.data.message)
       setAddvender(res.data.message);
@@ -56,7 +56,7 @@ function Vender() {
 
   //delete
   const handleDelete = async (id) => {
-    await axios.delete(`http://localhost:3000/api/DeleteVender${id}`);
+    await axios.delete(`https://sms-backend-wfdy.onrender.com/api/DeleteVender${id}`);
     fetchVender();
   };
 
@@ -140,7 +140,7 @@ function Vender() {
          console.log("ProductDetails11: ", venderForm);
          console.log("userid: ", currentId);
          const res = await axios.put(
-           ` http://localhost:3000/api/editvender/api/editVender/${currentId}`,
+           ` https://sms-backend-wfdy.onrender.com/api/editvender/api/editVender/${currentId}`,
            venderForm
          );
          console.log(res);

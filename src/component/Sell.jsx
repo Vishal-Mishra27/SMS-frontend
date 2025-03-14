@@ -27,7 +27,7 @@ const Sell = () => {
   const fetchProduct = async () => {
     try {
       const response = await axios.get(
-        "http://localhost:3000/api/product/api/getProduct"
+        "https://sms-backend-wfdy.onrender.com/api/product/api/getProduct"
       );
       setGetProduct(response.data.message);
     } catch (error) {
@@ -78,7 +78,7 @@ const Sell = () => {
     console.log(sellForm)
     try{
       const res = await axios.post(
-        "http://localhost:3000/api/sell/api/sellitem",
+        "https://sms-backend-wfdy.onrender.com/api/sell/api/sellitem",
         sellForm
       );
       console.log(res)

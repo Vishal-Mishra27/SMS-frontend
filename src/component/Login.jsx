@@ -25,7 +25,7 @@ function Login() {
 
       // ✅ Proper Axios request
       const res = await axios.post(
-        "http://localhost:3000/signup/getLogin",
+        "https://sms-backend-wfdy.onrender.com/signup/getLogin",
         loginData
       );
       const data = res.data; // Axios automatically parses JSON

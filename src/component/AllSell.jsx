@@ -20,7 +20,7 @@ const AllSell = () => {
   const fetchSellData = async () => {
     try {
       const response = await axios.get(
-        "http://localhost:3000/api/sell/api/getsellitem"
+        "https://sms-backend-wfdy.onrender.com/api/sell/api/getsellitem"
       );
       setGetSell(response.data.message);
     } catch (error) {
@@ -38,7 +38,7 @@ const AllSell = () => {
   const handleDelete = async (id) => {
     try {
       await axios.delete(
-        `http://localhost:3000/api/sell/api/deletesellitem/${id}`
+        `https://sms-backend-wfdy.onrender.com/api/sell/api/deletesellitem/${id}`
       );
       fetchSellData();
     } catch (error) {
@@ -100,7 +100,7 @@ const AllSell = () => {
       console.log("Sell Details: ", sellForm);
       console.log("userid: ", currentId);
       const res = await axios.put(
-        `http://localhost:3000/api/sell/api/editsellitem/${currentId}`,
+        `https://sms-backend-wfdy.onrender.com/api/sell/api/editsellitem/${currentId}`,
         sellForm
       );
       console.log(res);
